@@ -55,7 +55,7 @@ address {
   text-transform: uppercase;
 }
 .accent-text {
-  color: #fd9222;
+  color: var(--cl-accent);
 }
 
 .btn {
@@ -65,7 +65,7 @@ address {
   background-color: transparent;
 }
 .btn-accent {
-  background-color: #fd9222;
+  background-color: var(--cl-accent);
 }
 .btn-light {
 }
@@ -94,7 +94,7 @@ address {
 }
 .menu-link:hover,
 .menu-link:focus {
-  color: #fd9222;
+  color: var(--cl-accent);
 }
 /* #endregion */
 
@@ -261,7 +261,7 @@ address {
 }
 .contacts-link:hover,
 .contacts-link:focus {
-  color: #fd9222;
+  color: var(--cl-accent);
 }
 
 .footer-menu {
