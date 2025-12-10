@@ -1,0 +1,333 @@
+/* #region Base styles */
+/* html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
+:root {
+  /* --cl-accent: #fd9222; */
+  /* Colors */
+  --cl-accent: #22fd7a;
+
+  /* Typography */
+  --heading-1: 14px 400 normal;
+  --heading-2: 14px 400 normal;
+  --desc: 14px 400 normal;
+  --text: 14px 400 normal;
+
+  /* Effects */
+  --animations-slow: 600ms ease;
+  --animations-fast: 600ms ease;
+
+  /* Sizes */
+  --sm-box: 30px;
+  --md-box: 30px;
+  --lg-box: 30px;
+
+  --border: 1px solid #fd9222;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: #111111;
+  background-color: #fafafa;
+}
+
+/* #endregion */
+
+/* #region Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+address {
+  font-style: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* #endregion */
+
+/* #region Common styles */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+.container {
+  max-width: 1168px;
+  padding: 0 16px;
+  margin: 0 auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+.section-title {
+  color: var(--color-base-black, #111);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+.accent-text {
+  color: #fd9222;
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: transparent;
+}
+.btn-accent {
+  background-color: #fd9222;
+}
+.btn-light {
+}
+.btn-dark {
+  font-size: 18px;
+  color: #111;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+/* #endregion */
+
+/* #region Menu styles */
+.menu {
+}
+.menu-item {
+}
+.menu-link {
+  font-weight: 500;
+  line-height: 1.14;
+}
+.menu-link:hover,
+.menu-link:focus {
+  color: #fd9222;
+}
+/* #endregion */
+
+/* #region Socials styles */
+.socials {
+}
+.socials-item {
+  --size: 40px;
+
+  width: var(--size);
+  height: var(--size);
+}
+.socials-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid rgba(17, 17, 17, 0.1); */
+  border: var(--border);
+  border-radius: 10px;
+  padding: 8px;
+}
+.socials-icon {
+}
+/* #endregion */
+
+/* #region Header styles */
+.header {
+}
+/* #endregion */
+
+/* #region Hero styles */
+.hero {
+  background: rgba(17, 17, 17, 0.4);
+}
+.hero-title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+/* #endregion */
+
+/* #region Benefits styles */
+.benefits {
+  background: #1e1823;
+}
+.benefits-list {
+}
+.benefits-item {
+}
+.benefits-caption {
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+}
+.benefits-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+/* #endregion */
+
+/* #region Ingredients styles */
+.ingredients {
+}
+.ingredients-list {
+}
+.ingredients-item {
+}
+.ingredients-ill {
+}
+.ingredients-subtitle {
+  font-weight: 600;
+}
+/* #endregion */
+
+/* #region Made styles */
+.made {
+}
+.made-ill {
+}
+.made-caption {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+.made-list {
+}
+.made-item {
+}
+/* #endregion */
+
+/* #region Products styles */
+.products {
+}
+.products-list {
+}
+.products-item {
+}
+.products-pic {
+}
+.products-caption {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33333;
+  text-transform: uppercase;
+}
+.products-type {
+  font-size: 12px;
+  line-height: 1.17;
+  color: rgba(17, 17, 17, 0.7);
+}
+.products-label {
+  font-weight: 600;
+}
+/* #endregion */
+
+/* #region Bestsellers styles */
+.bestsellers {
+}
+.bestsellers-list {
+}
+.bestsellers-item {
+}
+.bestsellers-caption {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  text-transform: uppercase;
+}
+/* #endregion */
+
+/* #region Reviews styles */
+.reviews {
+}
+.reviews-list {
+}
+.reviews-item {
+}
+.reviews-author {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  text-align: center;
+}
+.reviews-text {
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
+}
+/* #endregion */
+
+/* #region Footer styles */
+.footer {
+  background: #1e1823;
+}
+.footer-slogan {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  color: #fff;
+}
+
+.footer-caption {
+  font-weight: 500;
+  color: #fff;
+}
+
+.contacts {
+}
+.contacts-list {
+}
+.contacts-item {
+}
+.contacts-link {
+  color: #fff;
+}
+.contacts-link:hover,
+.contacts-link:focus {
+  color: #fd9222;
+}
+
+.footer-menu {
+  color: #fff;
+}
+/* #endregion */
