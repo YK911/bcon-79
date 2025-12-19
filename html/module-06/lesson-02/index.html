@@ -29,7 +29,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header hide" id="home">
+    <header class="header" id="home">
       <div class="container">
         <nav class="header-nav">
           <a class="header-logo logo" href="./index.html">
@@ -38,6 +38,11 @@
               <use href="./images/icons.svg#logo"></use>
             </svg>
           </a>
+          <button class="mobile-menu-btn" type="button" data-menu-open>
+            <svg class="mobile-menu-icon" width="28" height="28">
+              <use href="./images/icons.svg#burger-menu"></use>
+            </svg>
+          </button>
           <ul class="menu">
             <li class="menu-item">
               <a class="menu-link active" href="#home">Home</a>
@@ -99,7 +104,7 @@
 
     <main>
       <!-- Hero -->
-      <section class="hero hide">
+      <section class="hero">
         <div class="hero-container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our&#160;finest ingredients for a
@@ -111,13 +116,9 @@
             <a class="hero-link" href="#benefits">
               scroll down
               <span class="hero-link-figure">
-                <img
-                  class="hero-link-icon"
-                  src="./images/icons/arrow-down.svg"
-                  alt="Shewron down"
-                  width="22"
-                  height="22"
-                />
+                <svg class="hero-link-icon" width="22" height="22">
+                  <use href="./images/icons.svg#arrow-down"></use>
+                </svg>
               </span>
             </a>
           </div>
@@ -331,19 +332,51 @@
           </h2>
           <ul class="products-list card-set">
             <li class="products-item card-set-item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/products/img-1.webp    1x,
+                    ./images/products/img-1@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/products/img-1.jpg    1x,
+                    ./images/products/img-1@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="products-pic"
+                  src="./images/products/img-1.jpg"
+                  alt="Orange Dark chocolate"
+                  width="230"
+                  height="201"
+                />
+              </picture>
+
+              <!-- <img
+                class="products-pic"
+                srcset="
+                  ./images/products/img-1.jpg    1x,
+                  ./images/products/img-1@2x.jpg 2x
+                "
                 src="./images/products/img-1.jpg"
                 alt="Orange Dark chocolate"
-                class="products-pic"
                 width="230"
                 height="201"
-              />
+              /> -->
               <h3 class="products-caption">Orange</h3>
               <p class="products-type">Dark chocolate</p>
               <p class="products-label">45 UAH</p>
             </li>
             <li class="products-item card-set-item">
               <img
+                srcset="
+                  ./images/products/img-2.jpg    1x,
+                  ./images/products/img-2@2x.jpg 2x
+                "
                 src="./images/products/img-2.jpg"
                 alt="Apple&Cranberry Milk chocolate"
                 class="products-pic"
@@ -356,6 +389,10 @@
             </li>
             <li class="products-item card-set-item">
               <img
+                srcset="
+                  ./images/products/img-3.jpg    1x,
+                  ./images/products/img-3@2x.jpg 2x
+                "
                 src="./images/products/img-3.jpg"
                 alt="Lime&Sea salt Dark chocolate"
                 class="products-pic"
@@ -368,6 +405,10 @@
             </li>
             <li class="products-item card-set-item">
               <img
+                srcset="
+                  ./images/products/img-4.jpg    1x,
+                  ./images/products/img-4@2x.jpg 2x
+                "
                 src="./images/products/img-4.jpg"
                 alt="Pineapple Dark chocolate"
                 class="products-pic"
@@ -380,6 +421,10 @@
             </li>
             <li class="products-item card-set-item">
               <img
+                srcset="
+                  ./images/products/img-5.jpg    1x,
+                  ./images/products/img-5@2x.jpg 2x
+                "
                 src="./images/products/img-5.jpg"
                 alt="Classic Milk chocolate"
                 class="products-pic"
@@ -392,6 +437,10 @@
             </li>
             <li class="products-item card-set-item">
               <img
+                srcset="
+                  ./images/products/img-6.jpg    1x,
+                  ./images/products/img-6@2x.jpg 2x
+                "
                 src="./images/products/img-6.jpg"
                 alt="Honey Milk chocolate"
                 class="products-pic"
@@ -404,6 +453,10 @@
             </li>
             <li class="products-item card-set-item">
               <img
+                srcset="
+                  ./images/products/img-7.jpg    1x,
+                  ./images/products/img-7@2x.jpg 2x
+                "
                 src="./images/products/img-7.jpg"
                 alt="Roasted fruits Dark chocolate"
                 class="products-pic"
@@ -416,6 +469,10 @@
             </li>
             <li class="products-item card-set-item">
               <img
+                srcset="
+                  ./images/products/img-8.jpg    1x,
+                  ./images/products/img-8@2x.jpg 2x
+                "
                 src="./images/products/img-8.jpg"
                 alt="Classic White chocolate"
                 class="products-pic"
@@ -786,6 +843,84 @@
       </div>
     </div>
 
+    <div class="mobile-menu" data-menu>
+      <button class="mobile-menu-btn" data-menu-close>
+        <svg class="mobile-menu-icon" width="24" height="24">
+          <use href="./images/icons.svg#x-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link active" href="#home">Home</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="#made">How it’s made?</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="#reviews">Chocolate is loved</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-contacts">
+        <li class="mobile-menu-contacts-item">
+          <a class="mobile-menu-contacts-link" href="tel:+110001111111">
+            +11 (000) 111-11-11
+          </a>
+        </li>
+        <li class="mobile-menu-contacts-item">
+          <a class="mobile-menu-contacts-link" href="mailto:info@devstudio.com">
+            info@devstudio.com
+          </a>
+        </li>
+      </ul>
+
+      <ul class="socials socials-dark">
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Site facebook.com"
+            style="--shift: 1"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Site instagram.com"
+            style="--shift: 2"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Site x.com"
+            style="--shift: 3"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <a class="scroll-to-top hide" href="#home">
       <svg class="scroll-to-top-icon" width="52" height="52">
         <use href="./images/icons.svg#arrow"></use>
@@ -794,5 +929,6 @@
 
     <!-- <script src="./js/script.js" type="module"></script> -->
     <script src="./js/form.js" type="module"></script>
+    <script defer src="./js/mobile-menu.js" type="module"></script>
   </body>
 </html>
