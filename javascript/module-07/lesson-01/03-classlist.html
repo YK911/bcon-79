@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,7 +9,7 @@
   <body>
     <p><a href="./index.html">Go back</a></p>
 
-    <ul class="site-nav">
+    <ul class="site-nav normalize">
       <li class="site-nav__item">
         <a href="/about" class="site-nav__link">About</a>
       </li>
@@ -20,6 +20,34 @@
         <a href="/contact" class="site-nav__link">Contacts</a>
       </li>
     </ul>
+
+    <button class="btn-open js-btn-open">Open popup</button>
+
+    <!-- <div class="backdrop"> -->
+    <div class="popup js-popup is-open">
+      <button class="btn-close js-btn-close">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+          <path
+            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+          />
+        </svg>
+      </button>
+      <h4>Popup title</h4>
+      <hr />
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, id.</p>
+    </div>
+    <!-- </div> -->
+
+    <form class="form js-form">
+      <p>Agreement form</p>
+      <input type="text" />
+      <label>
+        <input type="checkbox" name="agreement" />
+        <span>I agree with privacy policy</span>
+      </label>
+
+      <button class="disabled js-form-btn" type="submit">Send</button>
+    </form>
 
     <script src="./js/03-classlist.js"></script>
   </body>

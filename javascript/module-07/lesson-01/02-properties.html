@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
     <p><a href="./index.html">Go back</a></p>
 
     <section class="hero">
-      <h1 class="hero__title">About me</h1>
+      <h1 class="hero__title">About me <span>😃</span></h1>
       <img
         class="hero__image"
         src="https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=480"
@@ -21,13 +21,21 @@
 
     <hr />
 
-    <input type="text" class="js-input" />
+    <input
+      class="js-input"
+      type="text"
+      name="userName"
+      aria-label="User name"
+      value="Mark Spenser"
+    />
 
     <div class="actions">
       <button type="button" data-action="add">Create</button>
       <button type="button" data-action="remove">Delete</button>
       <button type="button" data-action="edit">Edit</button>
     </div>
+
+    <div class="output">Current button click: <span></span></div>
 
     <script src="./js/02-properties.js"></script>
   </body>
