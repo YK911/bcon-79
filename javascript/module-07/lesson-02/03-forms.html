@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,26 +12,27 @@
 
     <form class="js-form feedback-form">
       <input
-        type="text"
-        name="email"
         class="form-input"
+        type="email"
+        name="userEmail"
         placeholder="Email"
         required
       />
       <input
-        type="password"
-        name="password"
         class="form-input"
+        type="password"
+        name="userPassword"
         placeholder="Password"
         required
       />
       <textarea
+        class="form-textarea"
         cols="30"
         rows="10"
-        name="comment"
-        class="form-textarea"
+        name="userComment"
         placeholder="Comment"
       ></textarea>
+
       <button class="form-button">Submit</button>
     </form>
 

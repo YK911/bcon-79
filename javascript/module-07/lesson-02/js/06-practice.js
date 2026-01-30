@@ -1,7 +1,7 @@
 /**
  * Реалізуй пошук автомобілів по сайту
  * Користувач потрапляє на сайт і одразу бачить форму для пошуку і картки всіх автомобілів (масив cars)
- * Користувач може ввести в форму назву Марки або Моделі авто і в тегу селект обрати що він ввів Марку або Модель (https://prnt.sc/PkkZZRy_ggtT)
+ * Користувач може ввести в форму назву Марки або Моделі авто і через тег селект обрати що він ввів Марку або Модель (https://prnt.sc/PkkZZRy_ggtT)
  * Після натискання кнопки пошуку (сабміт форми) відмалюй авто які збігаються з критеріями пошуку
  */
 
@@ -39,7 +39,6 @@ const cars = [
     car: "Honda",
     type: "Accord",
     price: 20000,
-    number: "+380000000000",
     img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
   },
   {
@@ -47,7 +46,7 @@ const cars = [
     car: "Volvo",
     type: "XC60",
     price: 7000,
-    img: "https://www.volvocars.com/media/shared-assets/master/images/pages/my19/xc60-my19/accessories/xc60my19_accessories_exteriorfeature2_1.jpg?w=320",
+    img: "https://images.pexels.com/photos/14242297/pexels-photo-14242297.jpeg",
   },
 ];
 
@@ -55,3 +54,46 @@ const elements = {
   form: document.querySelector(".js-form"),
   container: document.querySelector(".js-list"),
 };
+
+// Use functions
+init(cars);
+elements.form.addEventListener("submit", handleFormSubmit);
+
+// Functions
+function init(cars = []) {
+  elements.container.innerHTML = createCarsMarkup(cars);
+}
+
+function createCarsMarkup(cars = []) {
+  return cars
+    .map(carInfo => {
+      return `<li class="car-item card" id="${carInfo.id}">
+      <div class="car-box">
+        <img class="car-img" src="${carInfo.img}" alt="${carInfo.car} ${carInfo.type}" />
+      </div>
+      <div class="car-wrapper">
+        <h3 class="car-desc card-title" >${carInfo.car} ${carInfo.type}</h3>
+        <p class="car-price" >${carInfo.price}</p>
+      </div>
+    </li>`;
+    })
+    .join("");
+}
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const searchValue = form.elements.query.value.trim().toLowerCase();
+  const searchType = form.elements.options.value;
+
+  const fiteredCars = cars.filter(item => {
+    return item[searchType].toLowerCase().includes(searchValue);
+  });
+
+  // console.log("🚀 ~ searchValue:", searchValue);
+  // console.log("🚀 ~ searchType:", searchType);
+  // console.table(fiteredCars);
+
+  elements.container.innerHTML = createCarsMarkup(fiteredCars);
+}

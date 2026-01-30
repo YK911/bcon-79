@@ -1,30 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Search</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/practice.css" />
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
+    <main class="container">
+      <form action="submit" class="js-form car-search">
+        <div class="car-group">
+          <input
+            class="car-input"
+            type="text"
+            name="query"
+            placeholder="Пошук"
+          />
+          <select class="car-select" name="options">
+            <option value="car">Марка</option>
+            <option value="type">Модель</option>
+          </select>
+        </div>
+        <button class="car-button">Пошук</button>
+      </form>
 
-    <form action="submit" class="js-form car-search">
-      <div class="car-group">
-        <input type="text" name="query" class="car-input" placeholder="Пошук" />
-      </div>
-      <div class="car-group">
-        <select name="options" class="car-select">
-          <option value="car">Марка</option>
-          <option value="type">Модель</option>
-        </select>
-      </div>
-      <button class="car-button">Пошук</button>
-    </form>
-
-    <ul class="js-list car-list"></ul>
+      <ul class="car-list js-list"></ul>
+    </main>
 
     <script src="./js/06-practice.js"></script>
   </body>
