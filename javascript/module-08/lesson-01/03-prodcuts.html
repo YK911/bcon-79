@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Practice: products</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/03-products.css" />
+  </head>
+  <body>
+    <p><a href="index.html">Go back</a></p>
+
+    <ul class="products">
+      <!-- <li class="item" id="1">
+        <img
+          src="https://www.vodafone.ua/shop/media/wysiwyg/novosti/Capture_1_large.JPG"
+          alt="Monitor"
+        />
+        <h4>Name: Monitor</h4>
+        <p>Price: 3000</p>
+      </li> -->
+    </ul>
+
+    <template id="modal-template">
+      <img class="" src="${fullItemInfo.img}" alt="${fullItemInfo.name}" />
+      <h3 class="">Type: ${fullItemInfo.name}</h3>
+      <div>
+        <div class="meta">
+          <h4 class="">Price</h4>
+          <p class="">${fullItemInfo.price}</p>
+        </div>
+        <div class="meta">
+          <h4 class="">Description</h4>
+          <p class="">${fullItemInfo.description}</p>
+        </div>
+      </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+    <script src="js/03-products.js" type="module"></script>
+  </body>
+</html>
