@@ -1,0 +1,73 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.products-item {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid;
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* BOOTSTRAP BLOG */
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .card-meta-tags {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tags-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(50px, 80px));
+    gap: 0.5rem;
+  }
+
+  .card-meta-likes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50px, 80px));
+    gap: 0.5rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
+
+  .card-meta-views {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
+
+.bi:before {
+  font-size: 1.2rem;
+  color: cornflowerblue;
+}
+
+.search-form {
+  max-width: 20rem;
+
+  .bi:before {
+    color: currentColor;
+  }
+}

@@ -23,8 +23,15 @@ for (const user of users) {
   names.push(user.name);
 }
 
-console.log(names);
+console.log("🚀 ~ names:", names);
 
 /**
  * З деструктуризацією
  */
+const Names = [];
+
+for (const { name } of users) {
+  Names.push(name);
+}
+
+console.log("🚀 ~ Names:", Names);
