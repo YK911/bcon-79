@@ -1,0 +1,11 @@
+{
+  "name": "Mango",
+  "age": 18,
+  "isHappy": true,
+  "favouriteColors": ["yellow", "brown"],
+  "favouriteBooks": {
+    "title": "Harry Potter",
+    "rating": 9.8
+  },
+  "cars": null
+}

@@ -1,32 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Practice: feedback form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/feedback.css" />
   </head>
-  <body>
-    <p><a href="index.html">Go back</a></p>
+  <body class="p-2">
+    <p>
+      <a class="btn btn-outline-info" href="index.html">Go back</a>
+    </p>
 
-    <form class="feedback-form">
-      <label>
-        <b>Name</b>
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter your name"
-          value="Anonymous"
-        />
-      </label>
-      <label>
-        <b>Message</b>
-        <textarea name="message" rows="6"></textarea>
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+    <div class="container">
+      <p class="display-6 text-center">Review form</p>
+      <form class="js-feedback-form p-3 border border-info rounded-1 shadow-sm">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <input
+            class="form-control"
+            type="text"
+            id="exampleFormControlInput1"
+            name="name"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="exampleFormControlTextarea1">
+            Message
+          </label>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            name="message"
+          ></textarea>
+        </div>
+        <button class="btn btn-info text-white" type="submit">Submit</button>
+      </form>
+    </div>
 
     <script src="js/02-feedback.js"></script>
   </body>
