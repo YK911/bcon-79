@@ -1,0 +1,26 @@
+.gallery,
+.reviews {
+  padding: 48px 0;
+
+  h2 {
+    margin-bottom: 24px;
+  }
+}
+.gallery-slider.swiper {
+  --swiper-navigation-size: 48px;
+  --swiper-theme-color: rgba(2, 6, 10, 1);
+}
+
+.gallery-slider-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(238, 233, 227, 1);
+}
+
+.reviews-slider.swiper {
+  padding-bottom: 30px;
+  --swiper-pagination-bottom: 6px;
+}
