@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,6 +17,7 @@
           <label for="breed-input">Оберіть породу кота:</label>
           <input
             list="breeds-list"
+            name="breed"
             id="breed-input"
             class="input-field"
             placeholder="Наприклад: Bengal"
@@ -25,12 +26,17 @@
           <datalist id="breeds-list"></datalist>
         </div>
 
-        <button type="submit" class="btn">Знайти зображення</button>
+        <button class="btn" type="submit" name="searchBreed">
+          Знайти зображення
+        </button>
       </form>
 
       <!-- Лоадер -->
       <div id="loader" class="loader hidden">
-        <p>Завантаження...</p>
+        <p>
+          <span class="spinner"></span>
+          Завантаження...
+        </p>
       </div>
     </div>
 
