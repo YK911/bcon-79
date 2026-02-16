@@ -1,17 +1,18 @@
-import axios from 'axios';
-import '../common.css';
+import axios from "axios";
+import "../common.css";
 
 /**
  * Синтаксис async/await
  * try...catch
  */
 
-const fetchTodos = () => {
-  return axios
-    .get('https://jsonplaceholder.typicode.com/todos')
-    .then(response => response.data);
+const fetchTodos = async () => {
+  const response = await axios.get(
+    "https://jsonplaceholder.typicode.com/todos"
+  );
+  return response.data;
 };
 
 fetchTodos()
-  .then(data => console.log('Todos:', data))
-  .catch(error => console.error('Помилка отримання Todos:', error));
+  .then(data => console.log("Todos:", data))
+  .catch(error => console.error("Помилка отримання Todos:", error));
