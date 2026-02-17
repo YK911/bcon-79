@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture Store</title>
+
+    <script type="module" src="./src/furniture.js"></script>
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="display-4">Наші меблі</h1>
+      <small>Знайдіть ідеальні рішення для вашого інтер'єру</small>
+
+      <form class="search-form">
+        <div class="input-group mb-3">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Пошук меблів"
+            aria-label="Recipient’s username"
+            aria-describedby="button-addon2"
+            name="productName"
+          />
+          <button
+            class="btn btn-outline-secondary"
+            type="submit"
+            id="button-addon2"
+          >
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>
+
+      <ul class="furniture-list row gy-4">
+        <!-- <li class="col-6">
+          <div class="card">
+            <img class="card-img-top rounded" src="" alt="" />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text"></p>
+              <button class="btn btn-primary" type="button">Детальніше</button>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+
+      <div class="py-3 text-center">
+        <button class="btn btn-primary d-none load-more" type="button">
+          Показати ще
+        </button>
+      </div>
+    </div>
+
+    <div class="toast-container p-3 top-0 end-0" id="toastPlacement">
+      <div
+        class="toast align-items-center text-bg-primary border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body">Last page</div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

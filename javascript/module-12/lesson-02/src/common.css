@@ -6,8 +6,16 @@
 
 /* Основні стилі */
 body {
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family:
+    "Open Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
   line-height: 1.5;
   background-color: #f4f4f4;
   margin: 0;
@@ -19,6 +27,11 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Контейнер */
@@ -68,11 +81,10 @@ img {
   margin: 15px 0;
   font-size: 14px;
   color: #666;
-}
 
-/* Ховаємо елементи */
-.hidden {
-  display: none;
+  &.hidden {
+    display: none;
+  }
 }
 
 /* Статті */
@@ -112,4 +124,13 @@ img {
   margin: 20px auto 0; /* Додає відступи зверху */
   width: 100%;
   max-width: 200px;
+
+  /* Ховаємо елементи */
+  &.hidden {
+    display: none;
+  }
+}
+
+.toast-container {
+  position: fixed !important;
 }
